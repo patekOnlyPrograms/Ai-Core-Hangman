@@ -2,9 +2,8 @@ import random
 
 word_list = ["apple", "banana", "cherry", "date", "elderberry"]
 print(word_list)
-choice = random.choice(word_list)
-word = choice
-print(word)
+word = random.choice(word_list)
+#print(word)
 
 
 
