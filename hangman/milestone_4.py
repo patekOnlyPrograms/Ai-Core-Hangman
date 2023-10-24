@@ -2,7 +2,32 @@ import random
 
 
 class Hangman:
+    """
+    A class to represent a hangman game
+
+    Attributes
+
+    word_list: list
+        a list of available words that can be chosen at random
+    num_lives: int
+        number of lives available for the player
+    word:
+        random word chosen from random picker
+    word_guessed: list
+        a list showing letters that have been guessed
+    num_letters: int
+        number of letters in the word
+    list_of_guesses: list
+        shows a list of guesses that have been made
+    """
+
     def __init__(self, word_list, num_lives=5):
+        """
+
+        :param word_list:
+        :param num_lives:
+        """
+
         self.world_list = word_list
         self.num_lives = num_lives
         self.word = random.choice(word_list)
@@ -15,7 +40,6 @@ class Hangman:
         if guess in self.word:
             print(f"Good guess {guess} is in the word")
             for i, letter in enumerate(self.word):
-                #print(i, ",",letter)
                 if self.word[i] == guess:
                     self.word_guessed[i] = guess
                     print(self.word_guessed)
