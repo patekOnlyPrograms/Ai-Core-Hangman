@@ -25,7 +25,11 @@ class Hangman:
         """
 
         :param word_list:
+            words that can be chosen from the randomiser
         :param num_lives:
+            number of the lives that the player has left
+
+
         """
 
         self.world_list = word_list
@@ -36,6 +40,17 @@ class Hangman:
         self.list_of_guesses = []
 
     def check_guess(self, guess):
+        """
+        Function that checks the guess of the word and also takes the letter
+        and amends the self.word.guessed to show guessed words
+
+        Parameters:
+        :param guess:
+            takes the letter guessed
+        :return:
+            list of the letter guessed and the word
+        """
+        
         guess = guess.lower()
         if guess in self.word:
             print(f"Good guess {guess} is in the word")
