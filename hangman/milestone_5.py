@@ -83,6 +83,14 @@ class Hangman:
                 self.list_of_guesses.append(guess)
 
     def play_game(self, word_list):
+        """
+        This function allows the user to play the game gives the high level implementation of the program
+
+        :param word_list:
+            word list that will be chosen
+
+        :return:
+        """
         num_lives = 5
         game = Hangman(word_list, num_lives)
         while True:
