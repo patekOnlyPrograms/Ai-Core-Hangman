@@ -75,8 +75,8 @@ class Hangman:
 
 word_list = ["apple", "banana", "cherry", "date", "elderberry"]
 hangmanGame = Hangman(word_list)
-print(hangmanGame.word)
+# print(hangmanGame.word)
 print(hangmanGame.word_guessed)
 print(hangmanGame.num_letters)
-print(hangmanGame.list_of_guesses)
+# print(hangmanGame.list_of_guesses)
 hangmanGame.play_game(word_list)
