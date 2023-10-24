@@ -50,7 +50,7 @@ class Hangman:
         :return:
             list of the letter guessed and the word
         """
-        
+
         guess = guess.lower()
         if guess in self.word:
             print(f"Good guess {guess} is in the word")
@@ -66,6 +66,12 @@ class Hangman:
                 print(f"the word was {self.word}")
 
     def ask_for_input(self):
+        """
+        this function allows the user to input letters and checks for validation or letters
+
+        :return:
+            this functions returns a list of guesses
+        """
         while True:
             guess = input("Enter a singe letter to guess the word \n")
             if not (len(guess) == 1 and guess.isalpha()):
