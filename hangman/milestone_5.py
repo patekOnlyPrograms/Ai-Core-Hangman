@@ -60,8 +60,6 @@ class Hangman:
             if len(guess) == 1 and guess.isalpha() and guess not in self.list_of_guesses:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
-                # print(self.list_of_guesses)
-
 
     def play_game(self, word_list):
         num_lives = 5
@@ -73,8 +71,6 @@ class Hangman:
                 self.ask_for_input()
             if self.num_lives is not 0 and (self.num_letters > 0):
                 print("Congratulations. You won the game!")
-
-
 
 
 word_list = ["apple", "banana", "cherry", "date", "elderberry"]
