@@ -69,11 +69,9 @@ class Hangman:
     def ask_for_input(self):
         """
         this function allows the user to input letters and checks for validation or letters
-
-        :return:
-            this functions returns a list of guesses
         """
-        while True:
+        continue_game = True
+        while continue_game:
             guess = input("Enter a singe letter to guess the word \n")
             if not (len(guess) == 1 and guess.isalpha()):
                 print("Invalid letter. Please, enter a single alphabetical character.")
@@ -82,6 +80,8 @@ class Hangman:
             if len(guess) == 1 and guess.isalpha() and guess not in self.list_of_guesses:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
+            if self.num_lives == 0:
+                continue_game = False
 
     def play_game(self, word_list):
         """
@@ -94,13 +94,16 @@ class Hangman:
         """
         num_lives = 5
         game = Hangman(word_list, num_lives)
-        while True:
-            if num_lives == 0:
-                print("You lost")
+        game_start = True
+        while game_start:
             if self.num_letters > 0:
                 self.ask_for_input()
+            if self.num_lives == 0:
+                print("You lost")
+                game_start = False
             if self.num_lives != 0 and (self.num_letters > 0):
                 print("Congratulations. You won the game!")
+                game_start = False
 
 
 word_list = ["apple", "banana", "cherry", "date", "elderberry"]
