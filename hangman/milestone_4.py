@@ -3,7 +3,7 @@ import random
 
 class Hangman:
     """
-    A class to represent a hangman game
+    A class to represent a 9.Hangman game
 
     Attributes
 
