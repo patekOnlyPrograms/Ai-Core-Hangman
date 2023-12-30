@@ -31,7 +31,10 @@ There is a .gitignore file that has files that are not required for this project
 Created milestone_2.py to create the foundation of the program and creating the logic
 for checking characters
 
-Added basic IO functions from the code to create the workflow ofthe
+Added basic IO functions from the code to create the workflow of the application. Uses
+random to pick a word from the word list. Uses the `isalpha()` function to to know if letter
+is alphabet without code bloat.
+
 ## Milestone 3
 
 Created functions to make the code more reusable and organising code so only two 
